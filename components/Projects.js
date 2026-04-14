@@ -29,20 +29,21 @@ const projectImages = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-white py-20 sm:py-24">
+    <section id="projects" className="py-20 sm:py-24">
       <div className="section-container">
         <div className="reveal text-center">
-          <h2 className="text-3xl font-bold text-secondary sm:text-4xl">Projects Gallery</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-slate-600">
-            A glimpse of the quality and professionalism we bring to every engagement.
+          <p className="eyebrow">Selected works</p>
+          <h2 className="section-title mt-3">Projects Gallery</h2>
+          <p className="section-copy mx-auto mt-4 max-w-2xl">
+            A snapshot of the quality, precision, and professionalism behind every engagement.
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {projectImages.map((image) => (
             <figure
               key={image.src}
-              className="reveal group relative overflow-hidden rounded-xl border border-slate-200"
+              className="reveal group relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm"
             >
               <Image
                 src={image.src}
@@ -51,7 +52,10 @@ export default function Projects() {
                 height={450}
                 className="h-64 w-full object-cover transition duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+              <figcaption className="pointer-events-none absolute inset-x-4 bottom-4 translate-y-3 text-sm font-medium text-white opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                {image.alt}
+              </figcaption>
             </figure>
           ))}
         </div>
