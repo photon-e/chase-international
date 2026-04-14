@@ -2,14 +2,16 @@
 
 ## Deploying on Netlify
 
-This project is configured as a static Next.js export for Netlify.
+This repo includes a `netlify.toml` with the Netlify build command and Node version.
 
-### Netlify settings (from `netlify.toml`)
+### Steps
 
-- Build command: `npm run build`
-- Publish directory: `out`
-- Node version: `20`
+1. Push this repository to GitHub.
+2. In Netlify, click **Add new site** → **Import an existing project**.
+3. Select this repo.
+4. Netlify will read `netlify.toml` and use:
+   - Build command: `npm run build`
+   - Node version: `20`
+5. Deploy.
 
-### Why this fixes missing CSS/JS
-
-Netlify serves static files from the configured publish directory. This repo now exports the site to `out/` and Netlify publishes that folder, so `/_next/static/*` assets (CSS/JS) are included in the deployment.
+Netlify will detect this as a Next.js project and run it with the Netlify Next.js runtime.
