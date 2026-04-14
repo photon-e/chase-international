@@ -32,7 +32,7 @@ export default function Projects() {
     <section id="projects" className="bg-white py-20 sm:py-24">
       <div className="section-container">
         <div className="reveal text-center">
-          <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Projects Gallery</h2>
+          <h2 className="text-3xl font-bold text-secondary sm:text-4xl">Projects Gallery</h2>
           <p className="mx-auto mt-4 max-w-2xl text-slate-600">
             A glimpse of the quality and professionalism we bring to every engagement.
           </p>
