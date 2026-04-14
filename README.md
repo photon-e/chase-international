@@ -1,22 +1,17 @@
 # chase-international
 
-## Deploying on Netlify (Next.js runtime)
+## Deploying on Netlify
 
-This project is configured for Netlify's Next.js runtime/plugin (SSR-capable mode).
+This repo includes a `netlify.toml` with the Netlify build command and Node version.
 
-### Netlify settings
+### Steps
 
-- Build command: `npm run build`
-- Node version: `20`
-- Framework preset: **Next.js**
-- Publish directory: prefer default/empty for Next.js runtime
+1. Push this repository to GitHub.
+2. In Netlify, click **Add new site** → **Import an existing project**.
+3. Select this repo.
+4. Netlify will read `netlify.toml` and use:
+   - Build command: `npm run build`
+   - Node version: `20`
+5. Deploy.
 
-### If the deployed page shows unstyled HTML
-
-Some Netlify setups publish `.next` directly. In that mode, Next assets are requested under `/_next/static/*`, but only `/static/*` may exist unless mirrored.
-
-To make this resilient, the build now runs a `postbuild` step that mirrors:
-
-- `.next/static` → `.next/_next/static`
-
-This ensures CSS/JS chunk URLs still resolve even when `.next` is used as the published directory.
+Netlify will detect this as a Next.js project and run it with the Netlify Next.js runtime.
