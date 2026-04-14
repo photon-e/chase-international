@@ -32,9 +32,9 @@ export default function Projects() {
     <section id="projects" className="py-20 sm:py-24">
       <div className="section-container">
         <div className="reveal text-center">
-          <p className="eyebrow">Selected works</p>
-          <h2 className="section-title mt-3">Projects Gallery</h2>
-          <p className="section-copy mx-auto mt-4 max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Selected works</p>
+          <h2 className="mt-3 text-3xl font-bold text-secondary sm:text-4xl">Projects Gallery</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-slate-600">
             A snapshot of the quality, precision, and professionalism behind every engagement.
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function Projects() {
           {projectImages.map((image) => (
             <figure
               key={image.src}
-              className="reveal group relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm"
+              className="reveal group relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100"
             >
               <Image
                 src={image.src}

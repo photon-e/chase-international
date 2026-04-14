@@ -18,9 +18,9 @@ export default function Services() {
     <section id="services" className="py-20 sm:py-24">
       <div className="section-container">
         <div className="reveal text-center">
-          <p className="eyebrow">Core capabilities</p>
-          <h2 className="section-title mt-3">Services that move projects forward</h2>
-          <p className="section-copy mx-auto mt-4 max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Core capabilities</p>
+          <h2 className="mt-3 text-3xl font-bold text-secondary sm:text-4xl">Services that move projects forward</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-slate-600">
             We provide end-to-end solutions that support infrastructure growth and long-term operational success.
           </p>
         </div>
@@ -29,10 +29,10 @@ export default function Services() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="reveal surface-card group p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="reveal group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="mb-4 h-1.5 w-12 rounded-full bg-blue-200 transition group-hover:w-20 group-hover:bg-blue-700" />
-              <h3 className="text-xl font-semibold text-slate-900">{service.title}</h3>
+              <div className="mb-4 h-1.5 w-12 rounded-full bg-primary/20 transition group-hover:w-20 group-hover:bg-primary" />
+              <h3 className="text-xl font-semibold text-secondary">{service.title}</h3>
               <p className="mt-3 leading-relaxed text-slate-600">{service.description}</p>
             </article>
           ))}
