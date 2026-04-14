@@ -29,7 +29,7 @@ const projectImages = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-white py-20 sm:py-24">
+    <section id="projects" className="py-20 sm:py-24">
       <div className="section-container">
         <div className="reveal text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Selected works</p>
