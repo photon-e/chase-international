@@ -1,21 +1,62 @@
+const stats = [
+  { label: 'Projects Delivered', value: '120+' },
+  { label: 'Years Experience', value: '10+' },
+  { label: 'Client Satisfaction', value: '98%' }
+];
+
 export default function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 pt-28">
-      <div className="section-container py-20 sm:py-28">
-        <div className="reveal max-w-3xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            General Contracts • Supplies • Construction • Trading
-          </p>
-          <h1 className="text-4xl font-extrabold leading-tight text-secondary sm:text-5xl lg:text-6xl">
-            Building the Future with Excellence
-          </h1>
-          <p className="mt-6 text-lg text-slate-600 sm:text-xl">CHASE N. INTERNATIONAL CO. LTD</p>
-          <a
-            href="#contact"
-            className="mt-8 inline-flex rounded-md bg-primary px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          >
-            Contact Us
-          </a>
+    <section id="home" className="relative overflow-hidden bg-gradient-to-br from-slate-100 via-white to-blue-100 pt-32">
+      <div className="pointer-events-none absolute -top-24 right-[-5rem] h-72 w-72 rounded-full bg-blue-200/60 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 left-[-7rem] h-72 w-72 rounded-full bg-sky-200/60 blur-3xl" />
+
+      <div className="section-container relative py-20 sm:py-24">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="reveal max-w-2xl">
+            <p className="mb-4 inline-flex rounded-full bg-blue-100 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
+              General Contracts • Supplies • Construction • Trading
+            </p>
+            <h1 className="text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
+              Building Reliable Infrastructure for a Fast-Growing Future
+            </h1>
+            <p className="mt-6 text-lg leading-relaxed text-slate-600 sm:text-xl">
+              CHASE N. INTERNATIONAL CO. LTD delivers end-to-end solutions with quality execution, trusted supply
+              networks, and dependable project management.
+            </p>
+
+            <div className="mt-9 flex flex-wrap items-center gap-4">
+              <a
+                href="#contact"
+                className="inline-flex rounded-full bg-blue-700 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:-translate-y-0.5 hover:bg-blue-800"
+              >
+                Start Your Project
+              </a>
+              <a
+                href="#projects"
+                className="inline-flex rounded-full border border-slate-300 bg-white px-7 py-3 text-sm font-semibold text-slate-900 transition hover:border-blue-700 hover:text-blue-700"
+              >
+                View Projects
+              </a>
+            </div>
+          </div>
+
+          <div className="reveal rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-xl shadow-slate-300/40 backdrop-blur">
+            <p className="text-sm font-semibold uppercase tracking-widest text-blue-700">Why choose us</p>
+            <h2 className="mt-2 text-2xl font-bold text-slate-900">Operational excellence, from plan to delivery.</h2>
+            <p className="mt-3 text-slate-600">
+              We combine field expertise, transparent communication, and strong quality controls to ensure consistent
+              outcomes.
+            </p>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-3">
+              {stats.map((item) => (
+                <div key={item.label} className="rounded-2xl bg-slate-50 p-4 text-center">
+                  <p className="text-2xl font-extrabold text-slate-900">{item.value}</p>
+                  <p className="mt-1 text-xs font-medium text-slate-500">{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
