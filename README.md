@@ -1,16 +1,17 @@
 # chase-international
 
-## Deploying on Netlify (Next.js runtime)
+## Deploying on Netlify
 
-This project should be deployed with Netlify's Next.js runtime/plugin (SSR-capable mode), not static export mode.
+This repo includes a `netlify.toml` with the Netlify build command and Node version.
 
-### Netlify settings
+### Steps
 
-- Build command: `npm run build`
-- Node version: `20`
-- Framework preset: **Next.js**
-- Publish directory in Netlify UI: leave empty/default for Next.js runtime (do not force `out`)
+1. Push this repository to GitHub.
+2. In Netlify, click **Add new site** → **Import an existing project**.
+3. Select this repo.
+4. Netlify will read `netlify.toml` and use:
+   - Build command: `npm run build`
+   - Node version: `20`
+5. Deploy.
 
-### Why this change
-
-If `output: 'export'` is mixed with dynamic Next.js behavior or Netlify runtime settings, builds can fail (for example `force-dynamic` export errors) or deploy with missing assets. Keeping standard Next.js build output lets Netlify's Next.js runtime serve JS/CSS correctly.
+Netlify will detect this as a Next.js project and run it with the Netlify Next.js runtime.
