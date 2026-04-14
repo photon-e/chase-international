@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
       <nav className="section-container flex h-16 items-center justify-between" aria-label="Main navigation">
-        <a href="#home" className="text-sm font-extrabold tracking-wide text-blue-700 sm:text-base">
+        <a href="#home" className="text-sm font-extrabold tracking-wide text-primary sm:text-base">
           CHASE N. INTERNATIONAL CO. LTD
         </a>
 
@@ -41,7 +41,7 @@ export default function Navbar() {
         <ul className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="text-sm font-medium text-slate-700 transition hover:text-blue-700">
+              <a href={link.href} className="text-sm font-medium text-slate-700 transition hover:text-primary">
                 {link.label}
               </a>
             </li>
@@ -56,7 +56,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="block py-2 text-sm font-medium text-slate-700 transition hover:text-blue-700"
+                  className="block py-2 text-sm font-medium text-slate-700 transition hover:text-primary"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
