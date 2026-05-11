@@ -13,7 +13,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
+          <div className="rounded-3xl border border-white/70 bg-white/70 p-8 shadow-xl shadow-blue-100/50 backdrop-blur">
             <h3 className="text-xl font-bold text-secondary">What clients can expect</h3>
             <ul className="mt-4 space-y-3 text-slate-600">
               <li>• On-time execution and clear communication</li>
