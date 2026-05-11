@@ -10,6 +10,10 @@ const services = [
   {
     title: 'General Trading',
     description: 'Efficient procurement and logistics solutions tailored to operational and budget requirements.'
+  },
+  {
+    title: 'Skill Acquisition',
+    description: 'Practical training and workforce development programs that build technical capacity for sustained project performance.'
   }
 ];
 
@@ -25,7 +29,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {services.map((service) => (
             <article
               key={service.title}
