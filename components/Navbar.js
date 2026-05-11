@@ -13,18 +13,18 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/60 bg-white/80 backdrop-blur-xl">
-      <nav className="section-container flex h-18 items-center justify-between" aria-label="Main navigation">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/60 bg-white/70 shadow-sm shadow-slate-900/5 backdrop-blur-2xl">
+      <nav className="section-container flex h-20 items-center justify-between" aria-label="Main navigation">
         <a href="#home" className="inline-flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-sm font-bold text-primary">
+          <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-blue-700 text-sm font-bold text-white shadow-lg shadow-blue-500/30">
             CI
           </span>
-          <span className="text-sm font-extrabold tracking-wide text-secondary sm:text-base">CHASE INTERNATIONAL</span>
+          <span className="text-sm font-black tracking-wide text-secondary sm:text-base">CHASE INTERNATIONAL</span>
         </a>
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-lg border border-slate-200 p-2 text-slate-700 md:hidden"
+          className="inline-flex items-center justify-center rounded-xl border border-slate-200/80 bg-white p-2 text-slate-700 md:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label="Toggle navigation menu"
@@ -40,7 +40,7 @@ export default function Navbar() {
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
-          <ul className="flex items-center gap-6 rounded-full border border-slate-200/80 bg-white/90 px-5 py-2 shadow-sm">
+          <ul className="flex items-center gap-6 rounded-full border border-slate-200/80 bg-white/90 px-6 py-2.5 shadow-lg shadow-slate-900/5">
             {links.map((link) => (
               <li key={link.href}>
                 <a href={link.href} className="text-sm font-medium text-slate-700 transition hover:text-primary">
@@ -51,7 +51,7 @@ export default function Navbar() {
           </ul>
           <a
             href="#contact"
-            className="inline-flex items-center rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
+            className="inline-flex items-center rounded-full bg-gradient-to-r from-secondary to-slate-700 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-slate-700/30 transition hover:-translate-y-0.5"
           >
             Get a Quote
           </a>
@@ -59,13 +59,13 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div id="mobile-menu" className="border-t border-slate-200 bg-white md:hidden">
+        <div id="mobile-menu" className="border-t border-slate-200/80 bg-white/95 backdrop-blur md:hidden">
           <ul className="section-container space-y-1 py-4">
             {links.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="block rounded-md px-2 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-primary"
+                  className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-primary"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
