@@ -1,6 +1,6 @@
 const stats = [
-  { label: 'Projects Delivered', value: '120+' },
-  { label: 'Years Experience', value: '10+' },
+  { label: 'Projects Delivered', value: '60+' },
+  { label: 'Years Experience', value: '5+' },
   { label: 'Client Satisfaction', value: '98%' }
 ];
 
@@ -27,13 +27,13 @@ export default function Hero() {
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a
                 href="#contact"
-                className="inline-flex rounded-full bg-primary px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:-translate-y-0.5 hover:bg-blue-700"
+                className="inline-flex items-center rounded-full bg-blue-700 px-8 py-3.5 text-sm font-bold tracking-wide text-white ring-2 ring-blue-200 shadow-xl shadow-blue-600/35 transition hover:-translate-y-0.5 hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300"
               >
                 Start Your Project
               </a>
               <a
                 href="#projects"
-                className="inline-flex rounded-full border border-slate-300 bg-white px-7 py-3 text-sm font-semibold text-secondary transition hover:border-primary hover:text-primary"
+                className="inline-flex items-center rounded-full border-2 border-blue-700 bg-white px-8 py-3.5 text-sm font-bold tracking-wide text-blue-800 shadow-lg shadow-blue-200/70 transition hover:-translate-y-0.5 hover:bg-blue-50 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-200"
               >
                 View Projects
               </a>
